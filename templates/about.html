@@ -40,6 +40,22 @@
     rel="apple-touch-icon" />
   <script
     type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
+  <style>
+    .nav_mobile {
+      transform: scaleY(0);
+      transform-origin: top;
+      opacity: 0;
+      pointer-events: none;
+      transition:
+        transform 1.2s cubic-bezier(.22,1,.36,1),
+        opacity 0.8s cubic-bezier(.22,1,.36,1);
+    }
+    .nav_mobile[data-nav-menu-open] {
+      transform: scaleY(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
 </head>
 
 <body>
@@ -767,6 +783,32 @@
           contactModal.style.display = 'none';
         }
       });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuButton = document.querySelector('.menu-button');
+      var navMenu = document.querySelector('.nav_mobile');
+      var navOpenClass = 'w--open';
+
+      if (menuButton && navMenu) {
+        menuButton.addEventListener('click', function() {
+          var isOpen = navMenu.hasAttribute('data-nav-menu-open');
+          menuButton.classList.toggle(navOpenClass, !isOpen);
+          if (isOpen) {
+            navMenu.removeAttribute('data-nav-menu-open');
+          } else {
+            navMenu.setAttribute('data-nav-menu-open', '');
+          }
+        });
+        // Optional: Hide menu when a nav link is clicked
+        navMenu.querySelectorAll('.nav_links').forEach(function(link) {
+          link.addEventListener('click', function() {
+            menuButton.classList.remove(navOpenClass);
+            navMenu.removeAttribute('data-nav-menu-open');
+          });
+        });
+      }
     });
   </script>
   <script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
