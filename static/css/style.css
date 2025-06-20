@@ -8267,3 +8267,18 @@ figcaption {
     scroll-behavior: auto !important;
   }
 }
+
+.contact-form .button.is-form-submit {
+  background-color: var(--brand--brand) !important;
+  color: #fff;
+  border: none;
+}
+
+#contact-modal textarea {
+  resize: vertical;
+  max-width: 100%;
+  max-height: 2000px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  overflow: auto;
+}
