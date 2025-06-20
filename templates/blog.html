@@ -78,20 +78,29 @@
                   </div>
                 </nav>
               </div>
+
               <div class="nav_buttons-wrap">
-                <div class="login-wrap hide-mobile-landscape">
-                  <a class="button is-sign w-inline-block" href="#">
-                    <svg class="icon-1x1-medium" fill="none" viewbox="0 0 20 20" width="100%" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.1331 9.05841C10.0498 9.05008 9.9498 9.05008 9.85814 9.05841C7.8748 8.99175 6.2998 7.36675 6.2998 5.36675C6.2998 3.32508 7.9498 1.66675 9.9998 1.66675C12.0415 1.66675 13.6998 3.32508 13.6998 5.36675C13.6915 7.36675 12.1165 8.99175 10.1331 9.05841Z"
-                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25">
-                      </path>
-                      <path d="M5.9666 12.1333C3.94993 13.4833 3.94993 15.6833 5.9666 17.0249C8.25827 18.5583 12.0166 18.5583 14.3083 17.0249C16.3249 15.6749 16.3249 13.4749 14.3083 12.1333C12.0249 10.6083 8.2666 10.6083 5.9666 12.1333Z"
-                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25">
-                      </path>
+                <div class="login-wrap hide-tablet">
+                  <a class="button is-sign w-inline-block" href="#" id="contact-cart-trigger"><svg
+                      class="icon-1x1-medium" fill="none" viewbox="0 0 20 20" width="100%"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.1331 9.05841C10.0498 9.05008 9.9498 9.05008 9.85814 9.05841C7.8748 8.99175 6.2998 7.36675 6.2998 5.36675C6.2998 3.32508 7.9498 1.66675 9.9998 1.66675C12.0415 1.66675 13.6998 3.32508 13.6998 5.36675C13.6915 7.36675 12.1165 8.99175 10.1331 9.05841Z"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+                      <path
+                        d="M5.9666 12.1333C3.94993 13.4833 3.94993 15.6833 5.9666 17.0249C8.25827 18.5583 12.0166 18.5583 14.3083 17.0249C16.3249 15.6749 16.3249 13.4749 14.3083 12.1333C12.0249 10.6083 8.2666 10.6083 5.9666 12.1333Z"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
                     </svg>
-                    <div> Contact us</div>
+                    <div>Contact us</div>
                   </a>
                 </div>
+                <a class="contact-mobile show-mobile w-inline-block" href="#" id="contact-cart-trigger-mobile" style="margin-right: 12px; display: none;">
+                  <svg class="icon-1x1-medium" fill="none" viewbox="0 0 20 20" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1331 9.05841C10.0498 9.05008 9.9498 9.05008 9.85814 9.05841C7.8748 8.99175 6.2998 7.36675 6.2998 5.36675C6.2998 3.32508 7.9498 1.66675 9.9998 1.66675C12.0415 1.66675 13.6998 3.32508 13.6998 5.36675C13.6915 7.36675 12.1165 8.99175 10.1331 9.05841Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+                    <path d="M5.9666 12.1333C3.94993 13.4833 3.94993 15.6833 5.9666 17.0249C8.25827 18.5583 12.0166 18.5583 14.3083 17.0249C16.3249 15.6749 16.3249 13.4749 14.3083 12.1333C12.0249 10.6083 8.2666 10.6083 5.9666 12.1333Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+                  </svg>
+                  <span class="contact-text">Contact</span>
+                </a>
                 <div class="menu-button w-nav-button">
                   <div class="nav-button_component">
                     <div class="nav-button_line is-first"></div>
@@ -100,6 +109,7 @@
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -426,9 +436,100 @@
       </section>
     </main>
   </div>
+
+
+  <!-- Contact Modal at end of body -->
+  <div id="contact-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:9999; justify-content:center; align-items:center;">
+    <div style="background:rgba(24,26,32,0.7); border-radius:16px; max-width:400px; width:90vw; margin:auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; padding:0; border:1px solid rgba(255,255,255,0.15); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+      <div class="w-commerce-commercecartheader cart-header" style="padding: 1.5rem 2rem 0.5rem 2rem;">
+        <h4 class="w-commerce-commercecartheading heading">Contact Us</h4>
+        <a aria-label="Close contact modal" class="w-commerce-commercecartcloselink close_icon w-inline-block" id="contact-modal-close" role="button" style="position:absolute; top:1.5rem; right:1.5rem; cursor:pointer;">
+          <svg height="16px" viewbox="0 0 16 16" width="16px">
+            <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+              <g fill="#fff" fill-rule="nonzero">
+                <polygon points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"></polygon>
+              </g>
+            </g>
+          </svg>
+        </a>
+      </div>
+      <div class="w-commerce-commercecartformwrapper" style="padding: 2rem;">
+        <div style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--brand--white-70, #aaa); text-align: center;">
+          Let us connect! Fill out the form below and we'll get back to you.
+        </div>
+        <form class="contact-form" style="display: flex; flex-direction: column; gap: 1rem;">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" required placeholder="Your Name" class="w-input form_input is-sign" />
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" required placeholder="Your Email" class="w-input form_input is-sign" />
+          <label for="contact-description">Description</label>
+          <textarea id="contact-description" name="description" rows="4" cols="10" required placeholder="How can we help you?" class="w-input form_input is-sign"></textarea>
+          <button type="submit" class="button is-sign is-form-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var contactBtn = document.getElementById('contact-cart-trigger');
+      var contactBtnMobile = document.getElementById('contact-cart-trigger-mobile');
+      var contactModal = document.getElementById('contact-modal');
+      var closeBtn = document.getElementById('contact-modal-close');
+      if (contactBtn && contactModal) {
+        contactBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          contactModal.style.display = 'flex';
+        });
+      }
+      if (contactBtnMobile && contactModal) {
+        contactBtnMobile.addEventListener('click', function(e) {
+          e.preventDefault();
+          contactModal.style.display = 'flex';
+        });
+      }
+      if (closeBtn && contactModal) {
+        closeBtn.addEventListener('click', function() {
+          contactModal.style.display = 'none';
+        });
+      }
+      // Optional: close modal when clicking outside the modal content
+      contactModal.addEventListener('click', function(e) {
+        if (e.target === contactModal) {
+          contactModal.style.display = 'none';
+        }
+      });
+    });
+  </script>
   <script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6751fa7e1ec6a53b12c88ba8"
     type="text/javascript"></script>
+  <script>
+    // Fallback for mobile navbar menu toggle if Webflow JS fails
+    $(document).ready(function() {
+      var navButton = $('.w-nav-button, .menu-button');
+      var navMenu = $('.w-nav-menu, .nav_mobile');
+      navButton.on('click', function() {
+        navMenu.slideToggle(250);
+        $(this).toggleClass('w--open');
+      });
+      // Optional: Hide menu when a link is clicked (for single-page nav UX)
+      navMenu.find('a').on('click', function() {
+        if (window.innerWidth <= 991) {
+          navMenu.slideUp(250);
+          navButton.removeClass('w--open');
+        }
+      });
+      // Handle window resize to reset nav menu for desktop view
+      $(window).on('resize', function() {
+        if (window.innerWidth > 991) {
+          navMenu.show();
+          navButton.removeClass('w--open');
+        } else {
+          navMenu.hide(); // Optional: hide menu on resize to mobile
+        }
+      });
+    });
+  </script>
   <script src="/static/js/main.bundle.js" type="text/javascript"></script>
   <script src="/static/js/ecommerce.bundle.js" type="text/javascript"></script>
   <script src="/static/js/site.main.js" type="text/javascript"></script>
