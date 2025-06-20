@@ -788,6 +788,15 @@
           navButton.removeClass('w--open');
         }
       });
+      // Handle window resize to reset nav menu for desktop view
+      $(window).on('resize', function() {
+        if (window.innerWidth > 991) {
+          navMenu.show();
+          navButton.removeClass('w--open');
+        } else {
+          navMenu.hide(); // Optional: hide menu on resize to mobile
+        }
+      });
     });
   </script>
   <script src="/static/js/main.bundle.js" type="text/javascript"></script>
