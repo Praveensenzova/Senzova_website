@@ -238,5 +238,47 @@ a,
         .team_grid {
           overflow-y: hidden;
         }
+
+        @media (max-width: 991px) {
+          .contact-mobile {
+            border: .0625rem solid var(--brand--white-20);
+            letter-spacing: -.008em;
+            background-color: #0000;
+            background-image: linear-gradient(#eaeafb00, #eaeafb1a);
+            min-height: auto;
+            max-height: 2.2rem;
+            height: 2.2rem;
+            padding: 0.45rem 0.75rem;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            font-weight: 500;
+            color: var(--brand--white);
+            border-radius: .63rem;
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: background-color .3s cubic-bezier(.165, .84, .44, 1), transform .3s cubic-bezier(.215, .61, .355, 1);
+          }
+          .contact-mobile:hover {
+            background-color: var(--brand--white-5);
+          }
+          .contact-mobile svg {
+            width: 1.1rem;
+            height: 1.1rem;
+            flex-shrink: 0;
+            color: var(--brand--white);
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .contact-mobile .contact-text {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--brand--white);
+            letter-spacing: -.008em;
+          }
+        }
       
       
